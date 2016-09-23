@@ -24,9 +24,10 @@ int ordenamiento_iterativo(int* arreglo, int n){
 
 int main(int argc, char* argv[]){
 	int n;
-	int* arreglo;
+	int* arreglo =NULL;
 	int i;
-	FILE * fileIN,*fileOUT;
+	FILE * fileIN =NULL;
+	FILE *fileOUT =NULL;
 	switch (argc){
 		case 0:
 			printf("%s\n", "ARGUMENTOS INSUFICIENTES");
@@ -37,7 +38,6 @@ int main(int argc, char* argv[]){
 			exit(EXIT_FAILURE);
 			break;
 		case 2:
-			printf("%s\n", argv[1]);
 			fileIN = fopen(argv[1],"r");
 			if(fileIN){
 				if(fscanf(fileIN,"%d\n",&n)==EOF){
@@ -63,7 +63,7 @@ int main(int argc, char* argv[]){
 				}else{
 					printf("%s\n", "ORDENAMIENTO EXISTOSO");
 					fileOUT = fopen("ARCHIVO_SALIDA_ITERATIVO.txt","w");
-					for (i = 0; i < n; ++i)
+					for (i = 0; i < n; i++)
 					{
 						fprintf(fileOUT, "%d\n", arreglo[i]);
 					}

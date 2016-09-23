@@ -69,7 +69,7 @@ int main(int argc, char* argv[]){
 				ordenamiento_recursivo(arreglo,0,n-1);
 				printf("%s\n", "ORDENAMIENTO EXISTOSO");
 				fileOUT = fopen("ARCHIVO_SALIDA_RECURSIVO.txt","w");
-				for (i = 0; i < n; ++i)
+				for (i = 0; i < n; i++)
 				{
 					fprintf(fileOUT, "%d\n", arreglo[i]);
 				}

@@ -1,0 +1,24 @@
+  400b20:	28a20002 	slti	v0,a1,2
+  400b24:	14400011 	bnez	v0,400b6c <ordenamiento_iterativo+0x4c>
+  400b28:	24a8ffff 	addiu	t0,a1,-1
+  400b2c:	00083880 	sll	a3,t0,0x2
+  400b30:	00873821 	addu	a3,a0,a3
+  400b34:	00801025 	move	v0,a0
+  400b38:	8c430000 	lw	v1,0(v0)
+  400b3c:	8c450004 	lw	a1,4(v0)
+  400b40:	00a3302a 	slt	a2,a1,v1
+  400b44:	10c00003 	beqz	a2,400b54 <ordenamiento_iterativo+0x34>
+  400b48:	00200825 	move	at,at
+  400b4c:	ac450000 	sw	a1,0(v0)
+  400b50:	ac430004 	sw	v1,4(v0)
+  400b54:	24420004 	addiu	v0,v0,4
+  400b58:	1447fff7 	bne	v0,a3,400b38 <ordenamiento_iterativo+0x18>
+  400b5c:	00200825 	move	at,at
+  400b60:	2508ffff 	addiu	t0,t0,-1
+  400b64:	1500fff3 	bnez	t0,400b34 <ordenamiento_iterativo+0x14>
+  400b68:	24e7fffc 	addiu	a3,a3,-4
+  400b6c:	03e00008 	jr	ra
+  400b70:	00200825 	move	at,at
+  400b74:	00200825 	move	at,at
+  400b78:	00200825 	move	at,at
+  400b7c:	00200825 	move	at,at

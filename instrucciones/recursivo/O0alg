@@ -1,0 +1,115 @@
+400900:	27bdffd0 	addiu	sp,sp,-48
+  400904:	afbf002c 	sw	ra,44(sp)
+  400908:	afbe0028 	sw	s8,40(sp)
+  40090c:	03a0f025 	move	s8,sp
+  400910:	afc40030 	sw	a0,48(s8)
+  400914:	afc50034 	sw	a1,52(s8)
+  400918:	afc60038 	sw	a2,56(s8)
+  40091c:	8fc20034 	lw	v0,52(s8)
+  400920:	afc20018 	sw	v0,24(s8)
+  400924:	8fc20038 	lw	v0,56(s8)
+  400928:	afc2001c 	sw	v0,28(s8)
+  40092c:	8fc30018 	lw	v1,24(s8)
+  400930:	8fc2001c 	lw	v0,28(s8)
+  400934:	00621021 	addu	v0,v1,v0
+  400938:	00021fc2 	srl	v1,v0,0x1f
+  40093c:	00621021 	addu	v0,v1,v0
+  400940:	00021043 	sra	v0,v0,0x1
+  400944:	00021080 	sll	v0,v0,0x2
+  400948:	8fc30030 	lw	v1,48(s8)
+  40094c:	00621021 	addu	v0,v1,v0
+  400950:	8c420000 	lw	v0,0(v0)
+  400954:	afc20020 	sw	v0,32(s8)
+  400958:	1000003c 	b	400a4c <ordenamiento_recursivo+0x14c>
+  40095c:	00200825 	move	at,at
+  400960:	8fc20018 	lw	v0,24(s8)
+  400964:	24420001 	addiu	v0,v0,1
+  400968:	afc20018 	sw	v0,24(s8)
+  40096c:	8fc20018 	lw	v0,24(s8)
+  400970:	00021080 	sll	v0,v0,0x2
+  400974:	8fc30030 	lw	v1,48(s8)
+  400978:	00621021 	addu	v0,v1,v0
+  40097c:	8c430000 	lw	v1,0(v0)
+  400980:	8fc20020 	lw	v0,32(s8)
+  400984:	0062102a 	slt	v0,v1,v0
+  400988:	1440fff5 	bnez	v0,400960 <ordenamiento_recursivo+0x60>
+  40098c:	00200825 	move	at,at
+  400990:	10000004 	b	4009a4 <ordenamiento_recursivo+0xa4>
+  400994:	00200825 	move	at,at
+  400998:	8fc2001c 	lw	v0,28(s8)
+  40099c:	2442ffff 	addiu	v0,v0,-1
+  4009a0:	afc2001c 	sw	v0,28(s8)
+  4009a4:	8fc2001c 	lw	v0,28(s8)
+  4009a8:	00021080 	sll	v0,v0,0x2
+  4009ac:	8fc30030 	lw	v1,48(s8)
+  4009b0:	00621021 	addu	v0,v1,v0
+  4009b4:	8c430000 	lw	v1,0(v0)
+  4009b8:	8fc20020 	lw	v0,32(s8)
+  4009bc:	0043102a 	slt	v0,v0,v1
+  4009c0:	1440fff5 	bnez	v0,400998 <ordenamiento_recursivo+0x98>
+  4009c4:	00200825 	move	at,at
+  4009c8:	8fc30018 	lw	v1,24(s8)
+  4009cc:	8fc2001c 	lw	v0,28(s8)
+  4009d0:	0043102a 	slt	v0,v0,v1
+  4009d4:	1440001d 	bnez	v0,400a4c <ordenamiento_recursivo+0x14c>
+  4009d8:	00200825 	move	at,at
+  4009dc:	8fc20018 	lw	v0,24(s8)
+  4009e0:	00021080 	sll	v0,v0,0x2
+  4009e4:	8fc30030 	lw	v1,48(s8)
+  4009e8:	00621021 	addu	v0,v1,v0
+  4009ec:	8c420000 	lw	v0,0(v0)
+  4009f0:	afc20024 	sw	v0,36(s8)
+  4009f4:	8fc20018 	lw	v0,24(s8)
+  4009f8:	00021080 	sll	v0,v0,0x2
+  4009fc:	8fc30030 	lw	v1,48(s8)
+  400a00:	00621021 	addu	v0,v1,v0
+  400a04:	8fc3001c 	lw	v1,28(s8)
+  400a08:	00031880 	sll	v1,v1,0x2
+  400a0c:	8fc40030 	lw	a0,48(s8)
+  400a10:	00831821 	addu	v1,a0,v1
+  400a14:	8c630000 	lw	v1,0(v1)
+  400a18:	ac430000 	sw	v1,0(v0)
+  400a1c:	8fc2001c 	lw	v0,28(s8)
+  400a20:	00021080 	sll	v0,v0,0x2
+  400a24:	8fc30030 	lw	v1,48(s8)
+  400a28:	00621021 	addu	v0,v1,v0
+  400a2c:	8fc30024 	lw	v1,36(s8)
+  400a30:	ac430000 	sw	v1,0(v0)
+  400a34:	8fc20018 	lw	v0,24(s8)
+  400a38:	24420001 	addiu	v0,v0,1
+  400a3c:	afc20018 	sw	v0,24(s8)
+  400a40:	8fc2001c 	lw	v0,28(s8)
+  400a44:	2442ffff 	addiu	v0,v0,-1
+  400a48:	afc2001c 	sw	v0,28(s8)
+  400a4c:	8fc30018 	lw	v1,24(s8)
+  400a50:	8fc2001c 	lw	v0,28(s8)
+  400a54:	0043102a 	slt	v0,v0,v1
+  400a58:	1040ffc4 	beqz	v0,40096c <ordenamiento_recursivo+0x6c>
+  400a5c:	00200825 	move	at,at
+  400a60:	8fc30034 	lw	v1,52(s8)
+  400a64:	8fc2001c 	lw	v0,28(s8)
+  400a68:	0062102a 	slt	v0,v1,v0
+  400a6c:	10400006 	beqz	v0,400a88 <ordenamiento_recursivo+0x188>
+  400a70:	00200825 	move	at,at
+  400a74:	8fc6001c 	lw	a2,28(s8)
+  400a78:	8fc50034 	lw	a1,52(s8)
+  400a7c:	8fc40030 	lw	a0,48(s8)
+  400a80:	0c100240 	jal	400900 <ordenamiento_recursivo>
+  400a84:	00200825 	move	at,at
+  400a88:	8fc30038 	lw	v1,56(s8)
+  400a8c:	8fc20018 	lw	v0,24(s8)
+  400a90:	0043102a 	slt	v0,v0,v1
+  400a94:	10400006 	beqz	v0,400ab0 <ordenamiento_recursivo+0x1b0>
+  400a98:	00200825 	move	at,at
+  400a9c:	8fc60038 	lw	a2,56(s8)
+  400aa0:	8fc50018 	lw	a1,24(s8)
+  400aa4:	8fc40030 	lw	a0,48(s8)
+  400aa8:	0c100240 	jal	400900 <ordenamiento_recursivo>
+  400aac:	00200825 	move	at,at
+  400ab0:	00200825 	move	at,at
+  400ab4:	03c0e825 	move	sp,s8
+  400ab8:	8fbf002c 	lw	ra,44(sp)
+  400abc:	8fbe0028 	lw	s8,40(sp)
+  400ac0:	27bd0030 	addiu	sp,sp,48
+  400ac4:	03e00008 	jr	ra
+  400ac8:	00200825 	move	at,at

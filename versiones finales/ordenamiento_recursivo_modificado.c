@@ -65,7 +65,7 @@ int main(int argc, char* argv[]){
 				
 				clock_t t_inicial =clock();
 				ordenamiento_recursivo(arreglo,0,n-1);
-				printf("Tiempo de ejecución: %f <-Iterativo\n", ((double)clock()-t_inicial)/CLOCKS_PER_SEC);
+				printf("Tiempo de ejecución recursivo (time.h): %f s\n", ((double)clock()-t_inicial)/CLOCKS_PER_SEC);
 				fileOUT = fopen("ARCHIVO_SALIDA_RECURSIVO.txt","w");
 				for (i = 0; i < n; i++)
 				{

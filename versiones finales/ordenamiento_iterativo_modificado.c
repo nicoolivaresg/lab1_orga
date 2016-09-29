@@ -54,8 +54,8 @@ int main(int argc, char* argv[]){
 				}
 				clock_t t_inicial = clock();
 				ordenamiento_iterativo(arreglo,n);
-				printf("Tiempo de ejecución: %f <-Recursivo\n", ((double)clock()-t_inicial)/CLOCKS_PER_SEC);
-				fileOUT = fopen("ARCHIVO_SALIDA_ITERATIVO.txt","w");
+				printf("Tiempo de ejecución iterativo (time.h): %f \n", ((double)clock()-t_inicial)/CLOCKS_PER_SEC);
+				fileOUT = fopen("SALIDA_ITERATIVO.txt","w");
 				for (i = 0; i < n; i++)
 				{
 					fprintf(fileOUT, "%d\n", arreglo[i]);

@@ -1,0 +1,11 @@
+MIPS calculados: 1.306915E+06
+Tiempo de ejecución del programa iterativo (-00): 2.663784E-04s (estimado)
+Tiempo de ejecución del programa iterativo (-01): 3.148800E-04s (estimado)
+Tiempo de ejecución del programa iterativo (-02): 3.200000E-04s (estimado)
+Tiempo de ejecución del programa iterativo (-03): 3.200000E-04s (estimado)
+Tiempo de ejecución del programa iterativo (-0s): 3.168000E-04s (estimado)
+Tiempo de ejecución del programa recursivo (-00): 3.177739E-04s (estimado)
+Tiempo de ejecución del programa recursivo (-01): 3.147907E-04s (estimado)
+Tiempo de ejecución del programa recursivo (-02): 3.169524E-04s (estimado)
+Tiempo de ejecución del programa recursivo (-03): 3.066839E-04s (estimado)
+Tiempo de ejecución del programa recursivo (-0s): 3.157333E-04s (estimado)

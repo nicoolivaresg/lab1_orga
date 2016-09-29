@@ -1,0 +1,24 @@
+Primero, teniendo en cuenta la fórmula de tiempo de CPU,
+\begin{equation}
+\label{eqn:tiempoCPU}
+T_{CPU} = NI \times CPI \times CK = \frac{NI \times CPI}{Fc}
+\end{equation}
+Siendo $CPI$ el número de ciclos que utilizan las instrucciones del programa, mientras que $NI$ es el número de instrucciones en el programa. Y CK es el número de ciclos de reloj de la CPU donde $CK = \frac{1}{Fc}$ con Fc como la frecuencia de reloj del procesador.
+\begin{itemize}
+\item NI: depende del compilador y la arquitectura utilizada.
+\item CPI: depende de la arquitectura y estructura (organización) de la máquina, es decir, cómo responde la implementación del procesador.
+\item CK o Fc: Depende de la estructura y la tecnología de la máquina.
+\end{itemize}
+Ahora reemplazando \ref{eqn:tiempoCPU} en \ref{eqn:mips_preliminar}, se tiene:
+\begin{equation}
+\label{eqn:MIPS_final}
+MIPS = \frac{Fc}{CPI_{promedio} \times 10^6}
+\end{equation}
+
+La ecuación \ref{eqn:MIPS_final} es aquella que expresa la cantidad de Millones de Instrucciones Por Segundo en función de la frecuencia de un procesador que ejecute la tarea, y además, está en función del CPI promedio de la tarea.
+Teniendo,
+\begin{equation}
+\label{eqn:CPI_promedio}
+CPI_{promedio} = \sum\limits_{i}^{tipos} ({CPI_i \times \frac{NI_i}{NI}})
+\end{equation}
+En la ecuación \ref{eqn:CPI_promedio} se distinguen los $CPI_i$ como los ciclos de reloj que le toma a la máquina realizar la instruccion del tipo i, mientras que el $\frac{NI_i}{NI}$ representa la proporción de instrucciones del tipo i en el programa.

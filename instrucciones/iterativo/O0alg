@@ -1,0 +1,74 @@
+400900:	27bdffe0 	addiu	sp,sp,-32
+  400904:	afbe001c 	sw	s8,28(sp)
+  400908:	03a0f025 	move	s8,sp
+  40090c:	afc40020 	sw	a0,32(s8)
+  400910:	afc50024 	sw	a1,36(s8)
+  400914:	24020001 	li	v0,1
+  400918:	afc20008 	sw	v0,8(s8)
+  40091c:	10000037 	b	4009fc <ordenamiento_iterativo+0xfc>
+  400920:	00200825 	move	at,at
+  400924:	afc0000c 	sw	zero,12(s8)
+  400928:	1000002a 	b	4009d4 <ordenamiento_iterativo+0xd4>
+  40092c:	00200825 	move	at,at
+  400930:	8fc2000c 	lw	v0,12(s8)
+  400934:	00021080 	sll	v0,v0,0x2
+  400938:	8fc30020 	lw	v1,32(s8)
+  40093c:	00621021 	addu	v0,v1,v0
+  400940:	8c430000 	lw	v1,0(v0)
+  400944:	8fc2000c 	lw	v0,12(s8)
+  400948:	24420001 	addiu	v0,v0,1
+  40094c:	00021080 	sll	v0,v0,0x2
+  400950:	8fc40020 	lw	a0,32(s8)
+  400954:	00821021 	addu	v0,a0,v0
+  400958:	8c420000 	lw	v0,0(v0)
+  40095c:	0043102a 	slt	v0,v0,v1
+  400960:	10400019 	beqz	v0,4009c8 <ordenamiento_iterativo+0xc8>
+  400964:	00200825 	move	at,at
+  400968:	8fc2000c 	lw	v0,12(s8)
+  40096c:	00021080 	sll	v0,v0,0x2
+  400970:	8fc30020 	lw	v1,32(s8)
+  400974:	00621021 	addu	v0,v1,v0
+  400978:	8c420000 	lw	v0,0(v0)
+  40097c:	afc20010 	sw	v0,16(s8)
+  400980:	8fc2000c 	lw	v0,12(s8)
+  400984:	00021080 	sll	v0,v0,0x2
+  400988:	8fc30020 	lw	v1,32(s8)
+  40098c:	00621021 	addu	v0,v1,v0
+  400990:	8fc3000c 	lw	v1,12(s8)
+  400994:	24630001 	addiu	v1,v1,1
+  400998:	00031880 	sll	v1,v1,0x2
+  40099c:	8fc40020 	lw	a0,32(s8)
+  4009a0:	00831821 	addu	v1,a0,v1
+  4009a4:	8c630000 	lw	v1,0(v1)
+  4009a8:	ac430000 	sw	v1,0(v0)
+  4009ac:	8fc2000c 	lw	v0,12(s8)
+  4009b0:	24420001 	addiu	v0,v0,1
+  4009b4:	00021080 	sll	v0,v0,0x2
+  4009b8:	8fc30020 	lw	v1,32(s8)
+  4009bc:	00621021 	addu	v0,v1,v0
+  4009c0:	8fc30010 	lw	v1,16(s8)
+  4009c4:	ac430000 	sw	v1,0(v0)
+  4009c8:	8fc2000c 	lw	v0,12(s8)
+  4009cc:	24420001 	addiu	v0,v0,1
+  4009d0:	afc2000c 	sw	v0,12(s8)
+  4009d4:	8fc30024 	lw	v1,36(s8)
+  4009d8:	8fc20008 	lw	v0,8(s8)
+  4009dc:	00621823 	subu	v1,v1,v0
+  4009e0:	8fc2000c 	lw	v0,12(s8)
+  4009e4:	0043102a 	slt	v0,v0,v1
+  4009e8:	1440ffd1 	bnez	v0,400930 <ordenamiento_iterativo+0x30>
+  4009ec:	00200825 	move	at,at
+  4009f0:	8fc20008 	lw	v0,8(s8)
+  4009f4:	24420001 	addiu	v0,v0,1
+  4009f8:	afc20008 	sw	v0,8(s8)
+  4009fc:	8fc30008 	lw	v1,8(s8)
+  400a00:	8fc20024 	lw	v0,36(s8)
+  400a04:	0062102a 	slt	v0,v1,v0
+  400a08:	1440ffc6 	bnez	v0,400924 <ordenamiento_iterativo+0x24>
+  400a0c:	00200825 	move	at,at
+  400a10:	00200825 	move	at,at
+  400a14:	03c0e825 	move	sp,s8
+  400a18:	8fbe001c 	lw	s8,28(sp)
+  400a1c:	27bd0020 	addiu	sp,sp,32
+  400a20:	03e00008 	jr	ra
+  400a24:	00200825 	move	at,at

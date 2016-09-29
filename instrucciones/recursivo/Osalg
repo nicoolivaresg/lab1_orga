@@ -1,0 +1,60 @@
+  400b30:	27bdffd8 	addiu	sp,sp,-40
+  400b34:	afb20020 	sw	s2,32(sp)
+  400b38:	00c09025 	move	s2,a2
+  400b3c:	afb1001c 	sw	s1,28(sp)
+  400b40:	00808825 	move	s1,a0
+  400b44:	afbf0024 	sw	ra,36(sp)
+  400b48:	afb00018 	sw	s0,24(sp)
+  400b4c:	00b21821 	addu	v1,a1,s2
+  400b50:	02403025 	move	a2,s2
+  400b54:	000317c2 	srl	v0,v1,0x1f
+  400b58:	00a08025 	move	s0,a1
+  400b5c:	00431021 	addu	v0,v0,v1
+  400b60:	00021043 	sra	v0,v0,0x1
+  400b64:	00021080 	sll	v0,v0,0x2
+  400b68:	02221021 	addu	v0,s1,v0
+  400b6c:	8c430000 	lw	v1,0(v0)
+  400b70:	00d0102a 	slt	v0,a2,s0
+  400b74:	1440001a 	bnez	v0,400be0 <ordenamiento_recursivo+0xb0>
+  400b78:	00101080 	sll	v0,s0,0x2
+  400b7c:	02221021 	addu	v0,s1,v0
+  400b80:	00403825 	move	a3,v0
+  400b84:	24420004 	addiu	v0,v0,4
+  400b88:	8c44fffc 	lw	a0,-4(v0)
+  400b8c:	0083402a 	slt	t0,a0,v1
+  400b90:	51000003 	beqzl	t0,400ba0 <ordenamiento_recursivo+0x70>
+  400b94:	00061080 	sll	v0,a2,0x2
+  400b98:	1000fff9 	b	400b80 <ordenamiento_recursivo+0x50>
+  400b9c:	26100001 	addiu	s0,s0,1
+  400ba0:	02221021 	addu	v0,s1,v0
+  400ba4:	00404825 	move	t1,v0
+  400ba8:	2442fffc 	addiu	v0,v0,-4
+  400bac:	8c480004 	lw	t0,4(v0)
+  400bb0:	0068502a 	slt	t2,v1,t0
+  400bb4:	51400003 	beqzl	t2,400bc4 <ordenamiento_recursivo+0x94>
+  400bb8:	00d0102a 	slt	v0,a2,s0
+  400bbc:	1000fff9 	b	400ba4 <ordenamiento_recursivo+0x74>
+  400bc0:	24c6ffff 	addiu	a2,a2,-1
+  400bc4:	1440ffeb 	bnez	v0,400b74 <ordenamiento_recursivo+0x44>
+  400bc8:	00d0102a 	slt	v0,a2,s0
+  400bcc:	ace80000 	sw	t0,0(a3)
+  400bd0:	26100001 	addiu	s0,s0,1
+  400bd4:	ad240000 	sw	a0,0(t1)
+  400bd8:	1000ffe5 	b	400b70 <ordenamiento_recursivo+0x40>
+  400bdc:	24c6ffff 	addiu	a2,a2,-1
+  400be0:	00a6102a 	slt	v0,a1,a2
+  400be4:	10400004 	beqz	v0,400bf8 <ordenamiento_recursivo+0xc8>
+  400be8:	0212102a 	slt	v0,s0,s2
+  400bec:	0c1002cc 	jal	400b30 <ordenamiento_recursivo>
+  400bf0:	02202025 	move	a0,s1
+  400bf4:	0212102a 	slt	v0,s0,s2
+  400bf8:	1440ffd4 	bnez	v0,400b4c <ordenamiento_recursivo+0x1c>
+  400bfc:	02002825 	move	a1,s0
+  400c00:	8fbf0024 	lw	ra,36(sp)
+  400c04:	8fb20020 	lw	s2,32(sp)
+  400c08:	8fb1001c 	lw	s1,28(sp)
+  400c0c:	8fb00018 	lw	s0,24(sp)
+  400c10:	03e00008 	jr	ra
+  400c14:	27bd0028 	addiu	sp,sp,40
+  400c18:	00200825 	move	at,at
+  400c1c:	00200825 	move	at,at

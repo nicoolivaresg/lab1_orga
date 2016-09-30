@@ -1,0 +1,11 @@
+MIPS calculados: 214748364 instrucciones/segundo
+Tiempo de ejecución del programa iterativo (-00): 0.0001117587s (estimado)
+Tiempo de ejecución del programa iterativo (-01): 0.0000391155s (estimado)
+Tiempo de ejecución del programa iterativo (-02): 0.0000316650s (estimado)
+Tiempo de ejecución del programa iterativo (-03): 0.0000316650s (estimado)
+Tiempo de ejecución del programa iterativo (-0s): 0.0000279397s (estimado)
+Tiempo de ejecución del programa recursivo (-00): 0.0000000784s (estimado)
+Tiempo de ejecución del programa recursivo (-01): 0.0000000600s (estimado)
+Tiempo de ejecución del programa recursivo (-02): 0.0000000581s (estimado)
+Tiempo de ejecución del programa recursivo (-03): 0.0000005488s (estimado)
+Tiempo de ejecución del programa recursivo (-0s): 0.0000000314s (estimado)
